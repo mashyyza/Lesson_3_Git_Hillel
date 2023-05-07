@@ -7,6 +7,178 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Hello</p>
+    <table border="1" style="width: 50%;">
+    <th colspan="2" style="text-transform: uppercase;">List of commands when working in the terminal</th>
+        <tr>
+        <th colspan="2">Initial setting - Setting user information for all local repositories</th>
+        </tr>
+        <tr>
+            <td>cd [name folder]</td>
+            <td>entering the folder</td>
+        </tr>
+        <tr>
+            <td>git config user.name</td>
+            <td>see name on Git</td>
+        </tr>
+        <tr>
+            <td>git config --global user.name "[name]"</td>
+            <td>change or created name</td>
+        </tr>
+        <tr>
+            <td>git config --global user.email "[email]"</td>
+            <td>change or created email</td>
+        </tr>
+        <tr>
+            <td>git init</td>
+            <td>intialized Git repository in local folder</td>
+        </tr>
+        <tr>
+            <td>git clone [url-адрес]</td>
+            <td>Downloads the repository along with its entire history of changes</td>
+        </tr>
+        <tr>
+        <tr>
+            <th colspan="2">Making changes - Viewing changes and creating commits (fixing changes)</th>
+        </tr>
+            <td>git status</td>
+            <td>Lists all new or changed files that need to be fixed</td>
+        </tr>
+        <tr>
+            <td>git add [file name]</td>
+            <td>Indexes the specified file for subsequent commit</td>
+        </tr>
+        <tr>
+            <td>git add .</td>
+            <td>Edd all file wich was changed current folder</td>
+        </tr>
+        <tr>
+            <td>git add *css</td>
+            <td>Edd all file wich was changed current folder with extension css</td>
+        </tr>
+        <tr>
+            <td>git commit -m "[message with description]"</td>
+            <td>Fixes indexed changes and saves them in version history</td>
+        </tr>
+        <tr>
+            <td>git commit -a -m "[message with description]"</td>
+            <td>Sequential execution git add and git commit. Only tracked file</td>
+        </tr>
+        <tr>
+            <td>git commit --amend -m "[new message with description]"</td>
+            <td>Complements the last commit without creating a new one</td>
+        </tr>
+        <tr>
+            <td>git reset [file]</td>
+            <td>Cancels the indexing of the specified file, while preserving its contents</td>
+        </tr>
+        </tr>
+            <td>git diff --stange</td>
+            <td>shows the difference between the current tracked state of the repository and the last snapshot of the repository</td>
+        </tr>
+        <tr>
+            <th colspan="2">Creating a repository - Creating a new repository or getting an ego from an existing URL</th>
+        </tr>
+            <td>git init [project name]</td>
+            <td>A new local repository with the given name is created</td>
+        </tr>
+        </tr>
+            <td>git clone [url-адрес]</td>
+            <td>Downloads the repository along with its entire history of changes</td>
+        </tr>
+        <tr>
+            <th colspan="2">View history - Viewing and studying the history of project file changes</th>
+        </tr>
+        </tr>
+            <td>git log</td>
+            <td>History of commits for the current branch</td>
+        </tr>
+        </tr>
+            <td>git diff</td>
+            <td>shows the difference between the current untracked state of the repository and the last snapshot of the repository</td>
+        </tr>
+        </tr>
+            <td>git diff COMMIT_ID</td>
+            <td>shows the difference between the current repository and specified of the repository</td>
+        </tr>
+        <tr>
+            <th colspan="2">Rollback commits - Error removal and correction of the created history</th>
+        </tr>
+        </tr>
+             <td>git reset --hard HEAD^^</td>
+            <td>Resets the entire history along with the state of the working directory to the specified commit</td>
+        </tr>
+        </tr>
+            <td>git reset --mixed HEAD^^</td>
+            <td>Returns the project to the specified commit and moving all commits to the untracked zone.</td>
+        </tr>
+        </tr>
+            <td>git reset --soft HEAD^^</td>
+            <td>Reverts the project to the specified commit, while setting all commits to tracked status.</td>
+        </tr>
+        <tr>
+            <th colspan="2">Moving between commits</th>
+        </tr>
+        </tr>
+             <td>git checkout [has commit #2] or git checkout HEAD^^ or git checkout HEAD~2</td>
+            <td>Revert to commit 2</td>
+        </tr>
+        </tr>
+            <td>git checkout master</td>
+            <td>Switch back to the current commit</td>
+        </tr>
+        <tr>
+            <th colspan="2">Command to configure and view remote repositories</th>
+        </tr>
+        </tr>
+             <td>git remote -v</td>
+            <td>Viewing the list of existing remote repositories</td>
+        </tr>
+        </tr>
+            <td>git remote add [repozitiri_name_repozitori_adress]</td>
+            <td>Add a new remote repository located at the specified address</td>
+        </tr>
+        </tr>
+            <td>git remote remove [name_repozitori]</td>
+            <td>Delet repositories with this name</td>
+        </tr>
+        <tr>
+            <th colspan="2">Synchronization with a remote repository - Registration of a remote repository and exchange of changes</th>
+        </tr>
+        </tr>
+             <td>git push</td>
+            <td>Uploads all changes of the local branch to the remote repository</td>
+        </tr>
+        </tr>
+            <td>git pull</td>
+            <td>Downloads history from a remote repository and merges it with the local one. pull = fetch + merge</td>
+        </tr>
+        <tr>
+            <th colspan="2">Collective work - Named series of commits and connection of work results</th>
+        </tr>
+        </tr>
+             <td>git branch</td>
+            <td>A list of named commit branches with an indication of the selected branch</td>
+        </tr>
+        </tr>
+            <td>git branch [name branch]</td>
+            <td>Created new branch</td>
+        </tr>
+        </tr>
+            <td>git branch -d [name branch]</td>
+            <td>Delete the branch</td>
+        </tr>
+        </tr>
+            <td>git checkout [name branch]</td>
+            <td>Switch to the specified branch</td>
+        </tr>
+        </tr>
+            <td>git checkout -b</td>
+            <td>Go to the newly created branch</td>
+        </tr>
+        </tr>
+            <td>git merge [name branch]</td>
+            <td>Changes the specified branch to the current branch</td>
+        </tr>
+    </table>
 </body>
 </html>
